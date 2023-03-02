@@ -133,10 +133,9 @@ const reiniciar = ()=>{
     limpiarFilas();
     cajafallo.innerHTML="";
     cajaError.innerHTML="";
-    // btnCrearPalabra.style.visibility = 'visible';
+    btnCrearPalabra.style.visibility = 'visible';
     inputAgregar.disabled=true;
     btnAgregar.disabled=true;
-
 }
 
 const limpiarFilas = () =>{

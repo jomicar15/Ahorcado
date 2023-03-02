@@ -80,8 +80,12 @@
   
   <div class="modal-opciones">
     <ol>
-      <li onclick="crearPalabra()" value="1">Añadir nueva palabra</li>
-      <li onclick="cerrarModal()" value="2">Salir</li>
+      <li class="effect" onclick="crearPalabra()" value="1">Añadir nueva palabra</li>
+      <li class="newPalabra" style="display: none;">
+        <input type="text" placeholder="Introduzca nueva palabra">
+        <button>Enviar palabra</button>
+      </li>
+      <li class="effect" onclick="cerrarModal()" value="2">Salir</li>
     </ol>
   </div>
 

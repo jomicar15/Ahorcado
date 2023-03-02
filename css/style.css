@@ -138,7 +138,7 @@ table #fila2{
 }
 
 #imgAhorcado:hover{
-    rotate: 5deg;
+    rotate: 30deg;
     transition: 1s ;
 }
 
@@ -267,7 +267,7 @@ h1{
     margin-left: 0;
 }
 
-.modal-opciones ol li:hover{
+.modal-opciones ol li.effect:hover{
     text-decoration: line-through;
     color: red;
     transform: scale(1.2);
@@ -291,7 +291,7 @@ h1{
     font-size: 1em;
     list-style: none;
     padding-left: 0;
-    border-radius: 15px;
+    border-radius: 20px; 
 }
 
 .blur{
@@ -300,5 +300,24 @@ h1{
     filter: blur(1.2rem);
 }
 
+.newPalabra{
+    display: flex;
+    flex-direction: column;
+}
+
+.newPalabra > input{
+    outline: none;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.newPalabra > button{
+    margin-top: 1em;
+    padding: 10px;
+    background-color: green;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}
 
 
