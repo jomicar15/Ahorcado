@@ -1,0 +1,304 @@
+body{
+    padding: 0;
+    margin: 0 auto;
+    background-color: rgb(255, 251, 251);
+    width: 100%;
+    text-align: center;
+    font-family: 'Roboto Mono', monospace;
+    color: green;
+}
+
+h1 {
+    position: relative;
+    top: -100px;
+    animation: slide-in 1s forwards;
+}
+
+h3{
+    color: white;
+    width: 300px;
+}
+
+h3:hover{
+    cursor: pointer; 
+}
+
+@keyframes slide-in{
+    from {
+        top: -100px;
+        opacity: 0;
+    }
+    to {
+        top: 0;
+        opacity: 1;
+    }
+}
+
+/* main{
+    background-color: rgb(240, 234, 234);
+}
+ */
+
+.caja-error{
+    color: red;
+}
+
+.caja-fallo{
+    color: red;
+}
+
+
+.caja-palabra{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 25px;
+}
+
+table{
+    font-size: 3em;
+}
+
+table #fila2{
+    margin: 0;
+    padding: 0;
+    height: 10px;
+}
+
+#fila1 TD{
+    height: auto;
+    width: 58px;
+}
+
+#fila1 TD P{
+    height: 70px;
+    margin: 0;
+    padding: 0;
+}
+
+#fila2 td hr{
+    width: auto;
+    height: 5px;
+    background-color: black;
+    margin: 0;
+}
+
+.container1{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 1.2em;
+}
+
+.container2{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-input-letter button{
+    width: auto;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: green;
+    font-weight: 500;
+    color: white;
+    cursor: pointer;
+    /* transform: scale(1); */
+}
+
+.container-input-letter button:disabled{
+    opacity: 0.5;
+    cursor: auto;
+}
+
+.container-input-letter input{
+    width: auto;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid rgb(98, 98, 98);
+    outline: none;
+    font-weight: bolder;
+}
+
+.container-input-letter input{
+    opacity: 0.5;
+}
+
+
+#imgAhorcado{
+    border-radius: 10px;
+    box-shadow: 15px 15px 30px;
+    color: black;
+}
+
+#imgAhorcado:hover{
+    rotate: 5deg;
+    transition: 1s ;
+}
+
+.container-input-letter button:hover{
+    box-shadow: 5px 5px 30px;
+    transform: scale(1.1);
+}
+.nav-bar{
+    width: 100%;
+    background-color: green;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+h1{
+    color: white;
+}
+
+.container-instrucciones{
+    position: relative;
+}
+
+.nav-instrucciones{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    margin-top: -15px;
+    z-index: 100;
+    width: 280px;
+    height: max-content;
+    border: 1px solid gray;
+    background-color: rgba(255, 255, 255, 0.92);
+    border-radius: 10px;
+    visibility: hidden;
+    color: black;
+}
+
+
+.nav-instrucciones > p{
+    box-sizing: border-box;
+    padding: 0 1em;
+    text-align: justify;
+}
+
+.nav-instrucciones > img{
+    margin-left: auto;
+    padding-right: 20px;
+    padding-top: 10px;
+    cursor: pointer;
+}
+
+.btnJugar{
+    width: 120px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: green;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+
+.btnJugar:hover{
+    box-shadow: 15px 15px 30px;
+    transform: scale(1.1);
+}
+
+.btnJugar:disabled{
+    opacity: 0.5;
+    background-color: red;
+}
+
+#volverAlInicio{
+    visibility: hidden;
+}
+
+.caja-btns{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+
+.btnLetra{
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    margin: 2px;
+    background-color: green;
+    color: white;
+    font-weight: bold;
+    /* margin-bottom: 1em; */
+}
+
+.btnLetra:hover{
+    transform: scale(1.1);
+    box-shadow: 5px 5px 30px;
+    cursor: pointer;
+}
+
+
+.cajaLetras{
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top: 2.5em;
+    margin-bottom: 2em;
+}
+
+.modal-opciones{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.modal-opciones ol li{
+    cursor: pointer;
+    margin-left: 0;
+}
+
+.modal-opciones ol li:hover{
+    text-decoration: line-through;
+    color: red;
+    transform: scale(1.2);
+    transition: 0.5s;
+}
+
+.modal-opciones ol{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    width: 300px;
+    height: 130px;
+    gap: 20px;
+    border: 2px solid black;
+    text-align: justify;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px;
+    background-color: white;
+    font-size: 1em;
+    list-style: none;
+    padding-left: 0;
+    border-radius: 15px;
+}
+
+.blur{
+    width: 100%;
+    height: 100%;
+    filter: blur(1.2rem);
+}
+
+
+

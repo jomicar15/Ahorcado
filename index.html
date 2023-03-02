@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ahorcado</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" type="text/css" />
+  </head>
+  <body>
+
+    <main>
+
+
+    <!-- blur -->
+    <div id="blurDiv" class="">
+      <div class="nav-bar">
+        <h1>Juego del Ahorcado</h1>
+
+        <div class="container-instrucciones">
+          <h3 onclick="abrirNavInstrucciones()">Instrucciones</h3>
+          <div class="nav-instrucciones">
+
+            
+            <img onclick="cerrarNavInstrucciones()" src="./img/boton-eliminar.png" alt="eliminar" width="20" height="20">
+              <p>- Su mecánica consiste en ir adivinando letras de una palabra oculta y conseguir averiguar su contenido. Contarás con 6 intentos posibles.</p>
+              <p>- Una vez adivines la palabra, ganarás el juego.</p>
+              <p>- Por el contrario si lo aciertas la palabra en 6 intentos, perderás.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container1">
+        <div class="container2">
+          <div class="caja-palabra">
+            <table>
+              <tr id="fila1"></tr>
+              <tr id="fila2"></tr>
+            </table>
+          </div>
+          <div class="container-input-letter">
+            <input
+              type="text"
+              placeholder="Introduce una letra"
+              value=""
+              disabled
+            />
+            <button onclick="agregarLetra()" disabled>Comprobar letra</button>
+            <p class="caja-error"></p>
+          </div>
+
+          <!-- funcionalidad de generar botones aleatorios -->
+          <div class="caja-btn"></div>
+        </div>
+        <div class="container-img-ahorcado">
+          <img
+            id="imgAhorcado"
+            src="./img/ahorcado0.png"
+            alt="ahorcado 1"
+            width="400"
+            height="400"
+          />
+        </div>
+      </div>
+      <div class="cajaLetras"></div>
+      <p class="caja-fallo"></p>
+
+      <div class="caja-btns">
+        <button id="btnJugar" class="btnJugar" onclick="jugar()">Jugar</button>
+        <button id="crearPalabra" class="btnJugar" onclick="opciones()">Opciones</button>
+        <button id="volverAlInicio" class="btnJugar" onclick="reiniciar()">volver al inicio</button>
+      </div>
+    </div>
+  
+  <div class="modal-opciones">
+    <ol>
+      <li onclick="crearPalabra()" value="1">Añadir nueva palabra</li>
+      <li onclick="cerrarModal()" value="2">Salir</li>
+    </ol>
+  </div>
+
+</main>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
