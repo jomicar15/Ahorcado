@@ -16,7 +16,6 @@ const fila1 = document.getElementById('fila1');
 const fila2 = document.getElementById('fila2');
 const blurDiv = document.getElementById('blurDiv');
 modalOpciones.style.display = 'none';
-
 //Variables y arrays para manipular 
 let palabraSeleccionada = "";
 let intentos = 0;
@@ -225,17 +224,52 @@ const opciones = ()=>{
     modalOpciones.style.display='flex';
 }
 
-const crearPalabra = ()=>{
-    console.log("creando nueva palabra");
+const ocultarAniadirPalabra = ()=>{
+    modalOpciones.firstElementChild.firstElementChild.style.display = 'none';
+    modalOpciones.firstElementChild.firstElementChild.nextElementSibling.style.display = 'flex';
 }
 
+const crearPalabra = ()=>{
+    //tomando los elementos del html para tenerlos en variables
+    let input = modalOpciones.firstElementChild.getElementsByTagName('li')[1].firstElementChild;
+    let cajaTexto = input.nextElementSibling.nextElementSibling;
+    // limpiando el contenido de la etiqueta p
+    cajaTexto.innerHTML = "";
+
+    //comparando si la caja de texto no es vacía y si la palabra tiene al menos 3 letras
+    input.value !== ""  && input.value.length > 2 ? 
+        (
+            //añadiendo una nueva palabra al array de palabras
+            palabras.push(input.value)
+            ,cajaTexto.textContent = "Palabra creada con éxito",
+            cajaTexto.style.display = 'flex',
+            cajaTexto.classList.contains('caja-error') && cajaTexto.classList.remove('caja-error')
+        )
+        : (
+            // caso que lo que ha introducido es vacío o no tiene al menos 3 letras
+            cajaTexto.textContent = "Debes introducir una palabra válida"
+            ,cajaTexto.style.display = 'flex',
+            !cajaTexto.classList.contains('caja-error') && cajaTexto.classList.add('caja-error')
+        )
+
+
+    //limpiando el valor del input para que no salga palabra anterior
+    input.value="";
+}
 
 const cerrarModal=()=>{
     blurDiv.classList.remove('blur');
     // modalOpciones.style.visibility= 'hidden';
+    modalOpciones.firstElementChild.firstElementChild.style.display = 'flex';
+    modalOpciones.firstElementChild.firstElementChild.nextElementSibling.style.display = 'none';
     modalOpciones.style.display = 'none';
+    let input = modalOpciones.firstElementChild.getElementsByTagName('li')[1].firstElementChild;
+    let cajaTexto = input.nextElementSibling.nextElementSibling;
+    cajaTexto.innerHTML = '';
+    input.value= '';
 
 }
+
 const abrirNavInstrucciones=()=>{
     document.getElementsByClassName('nav-instrucciones')[0].style.visibility = 'visible';
 }
@@ -243,6 +277,7 @@ const abrirNavInstrucciones=()=>{
 const cerrarNavInstrucciones=()=>{
     document.getElementsByClassName('nav-instrucciones')[0].style.visibility = 'hidden';
 }
+
 
 
 

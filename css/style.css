@@ -34,10 +34,6 @@ h3:hover{
     }
 }
 
-/* main{
-    background-color: rgb(240, 234, 234);
-}
- */
 
 .caja-error{
     color: red;
@@ -137,10 +133,13 @@ table #fila2{
     color: black;
 }
 
+
 #imgAhorcado:hover{
     rotate: 30deg;
     transition: 1s ;
 }
+
+
 
 .container-input-letter button:hover{
     box-shadow: 5px 5px 30px;
@@ -281,7 +280,6 @@ h1{
     align-items: center;
     box-sizing: border-box;
     width: 300px;
-    height: 130px;
     gap: 20px;
     border: 2px solid black;
     text-align: justify;
@@ -291,8 +289,11 @@ h1{
     font-size: 1em;
     list-style: none;
     padding-left: 0;
+    padding: 20px;
     border-radius: 20px; 
+    text-align: center;
 }
+
 
 .blur{
     width: 100%;
@@ -303,6 +304,7 @@ h1{
 .newPalabra{
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .newPalabra > input{
@@ -312,12 +314,16 @@ h1{
 }
 
 .newPalabra > button{
-    margin-top: 1em;
-    padding: 10px;
+    margin-top: 0.8em;
+    padding: 5px;
     background-color: green;
     border-radius: 20px;
     border: none;
     cursor: pointer;
+    width: 100px;
+    height: 30px;
 }
 
-
+.textGreen{
+    color: green;
+}

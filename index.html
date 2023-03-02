@@ -26,8 +26,6 @@
         <div class="container-instrucciones">
           <h3 onclick="abrirNavInstrucciones()">Instrucciones</h3>
           <div class="nav-instrucciones">
-
-            
             <img onclick="cerrarNavInstrucciones()" src="./img/boton-eliminar.png" alt="eliminar" width="20" height="20">
               <p>- Su mecánica consiste en ir adivinando letras de una palabra oculta y conseguir averiguar su contenido. Contarás con 6 intentos posibles.</p>
               <p>- Una vez adivines la palabra, ganarás el juego.</p>
@@ -80,11 +78,19 @@
   
   <div class="modal-opciones">
     <ol>
-      <li class="effect" onclick="crearPalabra()" value="1">Añadir nueva palabra</li>
+      <li class="effect" onclick="ocultarAniadirPalabra()" value="1">Añadir nueva palabra</li>
       <li class="newPalabra" style="display: none;">
         <input type="text" placeholder="Introduzca nueva palabra">
-        <button>Enviar palabra</button>
+        <button class="btnJugar" onclick="crearPalabra()">Crear Palabra</button>
+        <!-- error -->
+        <p style="display: none;"></p>
       </li>
+      <!-- <li class="effect">Eliminar palabra</li>
+      <li style="display: none;">
+        <select name="listaPalabras" id="listaPalabras">
+          
+        </select>
+      </li> -->
       <li class="effect" onclick="cerrarModal()" value="2">Salir</li>
     </ol>
   </div>
